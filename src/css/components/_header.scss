@@ -1,0 +1,54 @@
+header {
+    max-width: 1240px;
+    margin:auto;
+    padding: 40px 0px 60px 0px;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#logo {
+    width: 210px
+}
+
+nav {
+    display: flex;
+    gap: 57px;
+    font-size: 24px;
+    font-weight: 500;
+    align-items: center;
+
+    a {
+        color: #FF6060;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    header {
+        padding: 20px 0px;
+        width: 88%;
+    }
+
+    #logo {
+        width: 145px;
+    }
+
+    nav {
+        font-size: 12px;
+        gap: 10px;
+    }
+}
+
+
+@media only screen and (max-width:320px) {
+
+    #logo {
+        width: 90px;
+    }
+
+}
