@@ -1,13 +1,15 @@
 import '../css/style.css';
 import logo from '../assets/logo.png'
+import { Link } from 'react-router-dom'
+
 
 function Header() {
     return(
     <header>   
-        <img src={logo} alt='logo' id='logo'></img>
+        <Link to='/'><img src={logo} alt='logo' id='logo'></img></Link>
         <nav>
-            <a href=''>Acceuil</a>
-            <a href=''>A propos</a>
+            <Link to='/'>Acceuil</Link>
+            <Link to='/about'>A propos</Link>
         </nav>
     </header>
     )
