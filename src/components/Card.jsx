@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 function Card() {
   return (
-    <main>
+    <main className="card-main">
     <div className='card-container'>
       {data.map(({ id, title, cover }) => (
         <Link to='/housing'>
