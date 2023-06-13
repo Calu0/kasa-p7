@@ -17,7 +17,7 @@ code {
   align-items: center;
   justify-content: center;
 }
-#banner img {
+#banner .imgHome, #banner .imgAbout {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
@@ -40,7 +40,7 @@ code {
     padding: 0px 20px;
     width: 88%;
   }
-  #banner img {
+  #banner .imgHome {
     height: 111px;
   }
   #banner h1 {

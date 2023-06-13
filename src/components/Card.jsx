@@ -1,20 +1,22 @@
 import "../css/style.css";
 import data from "../data.json";
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
+import PropTypes from 'prop-types';
+
 
 function Card() {
   return (
     <main className="card-main">
-    <div className='card-container'>
-      {data.map(({ id, title, cover }) => (
-        <Link to='/housing'>
-        <article className='card' key={id}> 
-        <img src={cover} alt={title}></img>
-        <p>{title}</p>
-        </article>
-        </Link>
-      ))}
-    </div>
+      <div className="card-container">
+        {data.map(({ id, title, cover }) => (
+          <Link to={`/housing/${id}`} key={id}>
+            <article className="card">
+              <img src={cover} alt={title}></img>
+              <p>{title}</p>
+            </article>
+          </Link>
+        ))}
+      </div>
     </main>
   );
 }
