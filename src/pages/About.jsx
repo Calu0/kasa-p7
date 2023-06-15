@@ -5,7 +5,13 @@ import Collapse from "../components/Collapse";
 import styled from "styled-components";
 
 const CollapseWrapper = styled.main`
-  margin-bottom: 160px;
+  max-width: 1240px;
+  margin: auto;
+  padding-bottom: 220px;
+  width: 80%;
+  @media only screen and (max-width: 768px) {
+    width: 88%;
+  }
 `;
 
 function About() {

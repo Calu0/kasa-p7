@@ -14,7 +14,6 @@ function Banner(props) {
 
 Banner.propTypes = {
     img: PropTypes.string.isRequired,
-    txt: PropTypes.string.isRequired,
     className: PropTypes.string.isRequired
 }
 
