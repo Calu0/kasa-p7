@@ -53,7 +53,9 @@ const Arrow = styled.img`
   transition-property: transform;
 `;
 
-const Text = styled.div`
+const Text = styled.div.attrs(props => ({
+  className : props.className,
+}))`
   margin: -5px 0px 0px 0px;
   background-color: #f6f6f6;
   color: #ff6060;
@@ -70,7 +72,7 @@ const Text = styled.div`
 `;
 
 function Collapse(props) {
-    const { title, content, fontSize, fontSizeMobTitle, fontSizeMobText } = props;
+    const { title, content, className } = props;
     const [visible, setVisible] = useState(false);
 
     function trans(){

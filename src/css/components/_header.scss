@@ -1,7 +1,7 @@
 header {
     max-width: 1240px;
     margin: auto;
-    padding: 40px 0px 56px 0px;
+    padding: 40px 0px 0px 0px;
     width: 80%;
     display: flex;
     justify-content: space-between;
@@ -30,7 +30,7 @@ nav {
 
 @media only screen and (max-width: 768px) {
     header {
-        padding: 20px 0px;
+        padding: 20px 0px 0px 0px;
         width: 88%;
     }
 

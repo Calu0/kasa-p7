@@ -1,4 +1,4 @@
-#banner {
+.banner, .banner {
 
     max-width: 1240px;
     margin: auto;
@@ -7,13 +7,20 @@
     align-items: center;
     justify-content: center;
 
-    .imgHome, .imgAbout{
+    &__home{
+        margin-top:63px;
+    }
+
+    &__about{
+        margin-top:44px;
+    }
+
+    .img-home, .img-about{
         object-fit: cover;
         width: 100%;
         height: 223px;
         border-radius: 25px;
         filter: brightness(75%);
-
     }
 
     h1 {
@@ -27,12 +34,22 @@
     }
 }
 
+
 @media only screen and (max-width: 768px) {
-    #banner {
+
+    .banner {
         padding: 0px 20px;
         width: 88%;
 
-        .imgHome {
+        &__home{
+            margin-top:16px;
+        }
+    
+        &__about{
+            margin-top:17px;
+        }
+
+        .img-home {
             height: 111px;
         }
 
@@ -41,4 +58,5 @@
             margin: 40px;
         }
     }
+
 }

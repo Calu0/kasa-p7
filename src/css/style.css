@@ -9,7 +9,7 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
-#banner {
+.banner, .banner {
   max-width: 1240px;
   margin: auto;
   display: flex;
@@ -17,7 +17,13 @@ code {
   align-items: center;
   justify-content: center;
 }
-#banner .imgHome, #banner .imgAbout {
+.banner__home, .banner__home {
+  margin-top: 63px;
+}
+.banner__about, .banner__about {
+  margin-top: 44px;
+}
+.banner .img-home, .banner .img-about, .banner .img-home, .banner .img-about {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
@@ -25,7 +31,7 @@ code {
   border-radius: 25px;
   filter: brightness(75%);
 }
-#banner h1 {
+.banner h1, .banner h1 {
   position: absolute;
   color: white;
   font-size: 48px;
@@ -36,14 +42,20 @@ code {
 }
 
 @media only screen and (max-width: 768px) {
-  #banner {
+  .banner {
     padding: 0px 20px;
     width: 88%;
   }
-  #banner .imgHome {
+  .banner__home {
+    margin-top: 16px;
+  }
+  .banner__about {
+    margin-top: 17px;
+  }
+  .banner .img-home {
     height: 111px;
   }
-  #banner h1 {
+  .banner h1 {
     font-size: 24px;
     margin: 40px;
   }
@@ -123,7 +135,7 @@ code {
 header {
   max-width: 1240px;
   margin: auto;
-  padding: 40px 0px 56px 0px;
+  padding: 40px 0px 0px 0px;
   width: 80%;
   display: flex;
   justify-content: space-between;
@@ -150,7 +162,7 @@ nav a:hover {
 
 @media only screen and (max-width: 768px) {
   header {
-    padding: 20px 0px;
+    padding: 20px 0px 0px 0px;
     width: 88%;
   }
   #logo {
@@ -200,11 +212,65 @@ footer p {
     font-size: 12px;
   }
 }
-.slideshow-container img {
+.slideshow-wrapper {
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+@media only screen and (max-width: 768px) {
+  .slideshow-wrapper {
+    margin-bottom: 15px;
+  }
+}
+.slideshow-wrapper .picture {
+  border-radius: 25px;
   height: 415px;
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
+}
+@media only screen and (max-width: 768px) {
+  .slideshow-wrapper .picture {
+    height: 255px;
+  }
+}
+.slideshow-wrapper .dir-arrow-container {
+  max-width: 1240px;
+  margin: auto;
+  width: 77%;
+  display: flex;
+  position: absolute;
+  justify-content: space-between;
+  align-self: center;
+}
+@media only screen and (max-width: 768px) {
+  .slideshow-wrapper .dir-arrow-container {
+    width: 84%;
+  }
+}
+.slideshow-wrapper .dir-arrow-container .dir-arrow {
+  width: 46.68px;
+  cursor: pointer;
+}
+@media only screen and (max-width: 768px) {
+  .slideshow-wrapper .dir-arrow-container .dir-arrow {
+    width: 11.67px;
+  }
+}
+.slideshow-wrapper .dir-arrow-container .dir-arrow__left {
+  transform: scale(-1, 1);
+}
+.slideshow-wrapper .index {
+  position: absolute;
+  align-items: end;
+  color: white;
+  font-size: 24px;
+}
+@media only screen and (max-width: 768px) {
+  .slideshow-wrapper .index {
+    font-size: 14px;
+  }
 }
 
 .error {
@@ -258,8 +324,14 @@ footer p {
 }
 .housing {
   max-width: 1240px;
-  margin: auto;
+  margin: 20px auto auto auto;
   width: 80%;
+}
+@media only screen and (max-width: 768px) {
+  .housing {
+    margin: 27px auto auto auto;
+    width: 88%;
+  }
 }
 
 .container-info {

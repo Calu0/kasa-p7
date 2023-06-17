@@ -1,7 +1,11 @@
 .housing {
     max-width: 1240px;
-    margin: auto;
+    margin: 20px auto auto auto;
     width: 80%;
+    @media only screen and (max-width: 768px) {
+        margin: 27px auto auto auto;
+        width: 88%;
+    }
 }
 
 .container-info {

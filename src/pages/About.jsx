@@ -17,7 +17,7 @@ const CollapseWrapper = styled.main`
 function About() {
   return (
     <div className="about">
-      <Banner img={imgAbout} className="imgAbout" />
+      <Banner img={imgAbout} classNameBanner='banner banner__about' classNameImg="img-about" />
       <CollapseWrapper>
         <Collapse
           title="Fiabilité"

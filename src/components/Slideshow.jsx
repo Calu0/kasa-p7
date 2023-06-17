@@ -38,7 +38,6 @@ function Slideshow(props) {
         }
     }
 
-    //const indexMinusT =  currentIndex + 1 > 1 ? setCurrentIndex(currentIndex - 1) : setCurrentIndex(pictures.length - 1);
 
     return (
         <div className='slideshow-container'>
