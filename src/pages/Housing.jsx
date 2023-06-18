@@ -35,15 +35,12 @@ function Housing() {
   const filteredHouse = data.filter(house => house.id === id)
   const navigate = useNavigate()
 
-  
   useEffect(() => {
     if (filteredHouse.length === 0){
-      navigate('*')
+      navigate('/*')
     }
   })
   
-
-
   return (
     <main className="housing">
       {filteredHouse.map(({ id, title, description, equipments, host, location, pictures, rating, tags }) => (
