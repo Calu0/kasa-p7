@@ -3,9 +3,11 @@ import data from "../data.json";
 import Collapse from "../components/Collapse";
 import Slideshow from "../components/Slideshow";
 import styled from "styled-components";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
 import RedStar from "../assets/red-star.png";
 import GreyStar from "../assets/grey-star.png";
+
 
 
 function ratingStars(rating) {
@@ -31,6 +33,16 @@ function Housing() {
   const params = useParams()
   const id = params.id
   const filteredHouse = data.filter(house => house.id === id)
+  const navigate = useNavigate()
+
+  
+  useEffect(() => {
+    if (filteredHouse.length === 0){
+      navigate('*')
+    }
+  })
+  
+
 
   return (
     <main className="housing">
