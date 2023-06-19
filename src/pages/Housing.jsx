@@ -53,11 +53,11 @@ function Housing() {
               <div className="houseTitle">
                 <h1>{title}</h1>
                 <h2>{location}</h2>
-                <div className="container-tags">
+                <ul className="container-tags">
                   {tags.map((tag, index) => (
-                    <div key={`${tag}-${index}`} className="tag">{tag}</div>
+                    <li key={`${tag}-${index}`} className="tag">{tag}</li>
                   ))}
-                </div>
+                </ul>
               </div>
               <div className="host-rating">
                 <div className="host">
@@ -73,8 +73,8 @@ function Housing() {
             </div>
 
             <div className="collapseContainer">
-              <Collapse title='description' content={description} />
-              <Collapse title='équipements' content={equipments.map((equipement, index) => (
+              <Collapse  classNameWrapper='wrapper-housing' classNameArticle='article-housing' classNameTitle='title-housing' classNameText='text-housing' title='description' content={description} />
+              <Collapse  classNameWrapper='wrapper-housing' classNameArticle='article-housing' classNameTitle='title-housing' classNameText='text-housing' title='équipements' content={equipments.map((equipement, index) => (
                 <li key={`${equipement}-${index}`} className="listEquip">{equipement}</li>
               ))} />
             </div>

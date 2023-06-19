@@ -53,6 +53,10 @@
     align-items: center;
     gap: 10px;
     margin-top: 20px;
+    list-style: none;
+    padding: 0px;
+    flex-wrap: wrap;
+
     @media only screen and (max-width: 768px) {
         margin-top:10px;
     }
@@ -63,7 +67,8 @@
         margin: 0px;
         background-color: #ff6060;
         border-radius: 10px;
-        padding: 3px 10px;
+        min-width: fit-content;
+        padding: 4px 30px;
 
         @media only screen and (max-width: 768px) {
             font-size: 10px;
@@ -147,12 +152,14 @@
 
 .collapseContainer {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     gap: 76px;
-
+    height:auto;
+    min-height: 400px;
+    margin-bottom: 40px;
     @media only screen and (max-width: 768px) {
         flex-direction: column;
-        gap: 0px;
+        gap: 4px;
     }
 
     .listEquip {

@@ -43,7 +43,6 @@ code {
 
 @media only screen and (max-width: 768px) {
   .banner {
-    padding: 0px 20px;
     width: 88%;
   }
   .banner__home {
@@ -246,12 +245,13 @@ footer p {
 }
 @media only screen and (max-width: 768px) {
   .slideshow-wrapper .dir-arrow-container {
-    width: 84%;
+    width: 90%;
   }
 }
 .slideshow-wrapper .dir-arrow-container .dir-arrow {
   width: 46.68px;
   cursor: pointer;
+  padding: 20px;
 }
 @media only screen and (max-width: 768px) {
   .slideshow-wrapper .dir-arrow-container .dir-arrow {
@@ -376,6 +376,9 @@ footer p {
   align-items: center;
   gap: 10px;
   margin-top: 20px;
+  list-style: none;
+  padding: 0px;
+  flex-wrap: wrap;
 }
 @media only screen and (max-width: 768px) {
   .container-tags {
@@ -388,7 +391,9 @@ footer p {
   margin: 0px;
   background-color: #ff6060;
   border-radius: 10px;
-  padding: 3px 10px;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  padding: 4px 30px;
 }
 @media only screen and (max-width: 768px) {
   .container-tags .tag {
@@ -464,13 +469,16 @@ footer p {
 
 .collapseContainer {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   gap: 76px;
+  height: auto;
+  min-height: 400px;
+  margin-bottom: 40px;
 }
 @media only screen and (max-width: 768px) {
   .collapseContainer {
     flex-direction: column;
-    gap: 0px;
+    gap: 4px;
   }
 }
 .collapseContainer .listEquip {

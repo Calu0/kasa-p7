@@ -31,13 +31,14 @@
         align-self: center;
 
         @media only screen and (max-width: 768px) {
-            width: 84%;
+            width: 90%;
         }
 
         .dir-arrow {
 
             width: 46.68px;
             cursor: pointer;
+            padding: 20px;
 
             @media only screen and (max-width: 768px) {
                 width: 11.67px;
