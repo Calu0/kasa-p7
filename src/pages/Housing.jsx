@@ -2,9 +2,8 @@ import "../css/style.css";
 import data from "../data.json";
 import Collapse from "../components/Collapse";
 import Slideshow from "../components/Slideshow";
-import styled from "styled-components";
 import { useParams, useNavigate } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useEffect} from "react";
 import RedStar from "../assets/red-star.png";
 import GreyStar from "../assets/grey-star.png";
 
