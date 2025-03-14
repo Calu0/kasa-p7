@@ -3,7 +3,7 @@ import data from "../data.json";
 import Collapse from "../components/Collapse";
 import Slideshow from "../components/Slideshow";
 import { useParams, useNavigate } from "react-router-dom";
-import { useEffect} from "react";
+import { useEffect } from "react";
 import RedStar from "../assets/red-star.png";
 import GreyStar from "../assets/grey-star.png";
 
@@ -35,11 +35,12 @@ function Housing() {
   const navigate = useNavigate()
 
   useEffect(() => {
-    if (filteredHouse.length === 0){
+    if (filteredHouse.length === 0) {
       navigate('/*')
     }
-  })
-  
+    window.scrollTo(0, 0);
+  }, [filteredHouse, navigate])
+
   return (
     <main className="housing">
       {filteredHouse.map(({ id, title, description, equipments, host, location, pictures, rating, tags }) => (
@@ -72,8 +73,8 @@ function Housing() {
             </div>
 
             <div className="collapseContainer">
-              <Collapse  classNameWrapper='wrapper-housing' classNameArticle='article-housing' classNameTitle='title-housing' classNameText='text-housing' title='description' content={description} />
-              <Collapse  classNameWrapper='wrapper-housing' classNameArticle='article-housing' classNameTitle='title-housing' classNameText='text-housing' title='équipements' content={equipments.map((equipement, index) => (
+              <Collapse classNameWrapper='wrapper-housing' classNameArticle='article-housing' classNameTitle='title-housing' classNameText='text-housing' title='description' content={description} />
+              <Collapse classNameWrapper='wrapper-housing' classNameArticle='article-housing' classNameTitle='title-housing' classNameText='text-housing' title='équipements' content={equipments.map((equipement, index) => (
                 <li key={`${equipement}-${index}`} className="listEquip">{equipement}</li>
               ))} />
             </div>

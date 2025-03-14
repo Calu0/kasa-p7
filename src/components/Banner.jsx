@@ -6,19 +6,12 @@ function Banner(props) {
     const { img, txt, classNameImg, classNameBanner } = props;
     return (
         <div className={classNameBanner}>
-            <img src={img} alt="landscape" className={classNameImg}></img>
+            <img src={img ? img : imgHome} alt="landscape" className={classNameImg}></img>
             {txt}
         </div>
     );
 }
 
-Banner.propTypes = {
-    img: PropTypes.string.isRequired,
-}
-
-Banner.defaultProps = {
-    img: imgHome,
-}
 
 
 export default Banner;
