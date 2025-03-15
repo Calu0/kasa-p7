@@ -1,5 +1,3 @@
-"use client"
-
 import "../css/style.css"
 import styled from "styled-components"
 import { useState } from "react"
